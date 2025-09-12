@@ -1,0 +1,129 @@
+/* Navbar base */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+
+  /* Prevent layout jump on scroll */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+
+  /* Lock navbar on mobile */
+  will-change: transform;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4c29;
+}
+
+/* Nav Links (desktop) */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navLinks li a:hover {
+  color: #ff4c29;
+}
+
+/* CTA Button */
+.ctaBtn,
+.ctaBtnDesktop {
+  background: #ff4c29;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ctaBtn:hover,
+.ctaBtnDesktop:hover {
+  background: #e63e20;
+}
+
+/* Mobile Button hidden by default */
+.mobileBtn {
+  display: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: fixed;
+    /* changed from absolute → fixed */
+    top: 70px;
+    right: -100%;
+    background: #111;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 200px;
+    padding: 2rem;
+    text-align: center;
+    transition: right 0.3s ease-in-out;
+    height: 100vh;
+    /* prevent body scroll bounce */
+  }
+
+  .navLinks.open {
+    right: 0;
+  }
+
+  .ctaBtnDesktop {
+    display: none;
+  }
+
+  .mobileBtn {
+    display: block;
+  }
+}
+
+/* Extra fix: Prevent body shift */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
