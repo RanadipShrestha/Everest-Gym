@@ -1,0 +1,176 @@
+.container {
+  width: 100%;
+  max-width: 98%;
+  padding: 20px;
+  margin-left: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.header .about-us {
+  color: #ffd700;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.header .title {
+  font-size: 3em;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
+.header .description {
+  font-size: 1.1em;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  /* helps on smaller screens */
+}
+
+.stat {
+  font-size: 1.2em;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.stat span {
+  display: block;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.navButtons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.navButtons button {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.navButtons button:hover {
+  background-color: rgba(255, 215, 0, 0.7);
+}
+
+/* ======================
+   RESPONSIVENESS
+   ====================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .header .title {
+    font-size: 2.5em;
+  }
+
+  .header .description {
+    font-size: 1em;
+    max-width: 90%;
+  }
+
+  .stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .stat {
+    font-size: 1em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 10px;
+    padding: 15px;
+  }
+
+  .header .title {
+    font-size: 2em;
+  }
+
+  .header .description {
+    font-size: 0.95em;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .navButtons button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2em;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .header .about-us {
+    font-size: 1em;
+  }
+
+  .header .title {
+    font-size: 1.6em;
+  }
+
+  .header .description {
+    font-size: 0.85em;
+    line-height: 1.4;
+  }
+
+  .stat {
+    font-size: 0.9em;
+  }
+
+  .navButtons button {
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+  }
+}
