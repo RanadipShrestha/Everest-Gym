@@ -10,7 +10,14 @@ const images = [gym1, gym2, gym3];
 export default function HeroCarousel({ autoSlide = true, interval = 3000 }) {
   const [current, setCurrent] = useState(0);
 
-  
+  useEffect(() => {
+    if (!autoSlide) return;
+    const slide = setInterval(() => {
+      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, interval);
+
+    return () => clearInterval(slide);
+  }, [autoSlide, interval]);
 
   const prevSlide = () => {
     setCurrent(current === 0 ? images.length - 1 : current - 1);
