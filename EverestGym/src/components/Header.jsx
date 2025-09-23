@@ -34,8 +34,19 @@ const Header = () => {
           <a href="#contact">Contact</a>
         </li>
         <li className={styles.mobileBtn}>
-          <button className={styles.ctaBtn}>Join Now</button>
+          <button
+            className={styles.ctaBtn}
+            onClick={() => (window.location.href = "/login")}
+          >
+            Join Now
+          </button>
         </li>
+        <button
+          className={styles.ctaBtnDesktop}
+          onClick={() => (window.location.href = "/login")}
+        >
+          Join Now
+        </button>
       </ul>
 
       {/* Desktop CTA */}
