@@ -1,0 +1,99 @@
+.subscriptionSection {
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.subscriptionSection p {
+  font-size: 1.2em;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.subscriptionSection h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.subscriptionSection h1 span {
+  color: #ffc107;
+}
+
+/* container for plans */
+.monthly {
+  display: flex;
+  justify-content: center;
+}
+
+.plans {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* makes it responsive */
+}
+
+/* individual plan card */
+.plan {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-8px);
+}
+
+.plan h2 {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.plan p {
+  font-size: 1em;
+  color: #ccc;
+  margin: 10px 0;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin: 15px 0;
+}
+
+.plan ul li {
+  color: #a3be8c;
+  margin-bottom: 10px;
+}
+
+.plan ul li::before {
+  content: "✔ ";
+  color: #ffc107;
+}
+
+.plan button {
+  background-color: #ffc107;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.plan button:hover {
+  background-color: #ffca28;
+}
+
+/* highlight the Standard plan */
+.plans .plan:nth-child(2) {
+  background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+  border: 2px solid #ffc107;
+  transform: scale(1.05);
+}

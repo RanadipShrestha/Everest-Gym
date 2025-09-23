@@ -1,0 +1,101 @@
+.contactSection {
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contactSection h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ffc107;
+}
+
+.contactSection p {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contactForm {
+  flex: 1;
+  background: #2a2a2a;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.95em;
+  color: #ffc107;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1em;
+}
+
+.inputGroup input {
+  height: 40px;
+}
+
+.inputGroup textarea {
+  resize: none;
+}
+
+.contactForm button {
+  background-color: #ffc107;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.contactForm button:hover {
+  background-color: #ffca28;
+}
+
+.contactMap {
+  flex: 1;
+  min-height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactMap {
+    min-height: 300px;
+  }
+}
