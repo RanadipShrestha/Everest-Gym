@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./css/Header.module.css";
 
 const Header = () => {
@@ -33,24 +34,19 @@ const Header = () => {
         <li>
           <a href="#contact">Contact</a>
         </li>
+
+        {/* Mobile Join Now */}
         <li className={styles.mobileBtn}>
-          <button
-            className={styles.ctaBtn}
-            onClick={() => (window.location.href = "/login")}
-          >
+          <Link to="/login" className={styles.ctaBtn}>
             Join Now
-          </button>
+          </Link>
         </li>
-        <button
-          className={styles.ctaBtnDesktop}
-          onClick={() => (window.location.href = "/login")}
-        >
-          Join Now
-        </button>
       </ul>
 
-      {/* Desktop CTA */}
-      <button className={styles.ctaBtnDesktop}>Join Now</button>
+      {/* Desktop Join Now */}
+      <Link to="/login" className={styles.ctaBtnDesktop}>
+        Join Now
+      </Link>
     </nav>
   );
 };

@@ -14,7 +14,8 @@ export default function Login({ onLogin }) {
 
   const validate = () => {
     if (!email.trim()) return "Email is required";
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return "Enter a valid email";
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email))
+      return "Enter a valid email";
     if (!password) return "Password is required";
     if (password.length < 6) return "Password must be at least 6 characters";
     return "";
@@ -36,7 +37,6 @@ export default function Login({ onLogin }) {
       if (onLogin) {
         await onLogin({ email, password, remember });
       } else {
-        // Fake API delay
         await new Promise((res) => setTimeout(res, 1000));
 
         // Demo login
@@ -68,13 +68,13 @@ export default function Login({ onLogin }) {
             Log in to track workouts, book classes, and manage your membership.
           </p>
           <img
-            src="https://images.unsplash.com/photo-1554284126-aa88f22d8f9e?q=80&w=800&auto=format&fit=crop"
+            src="https://th.bing.com/th/id/R.fd5b4dab265befc4d5cb1d6bf9c547d6?rik=VlIi3FZWtlBPXA&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f2754888%2foriginal.jpg&ehk=RvrXz5d5RQXRSXL9CHBoxrciFB7wlTKQKmeWe%2fpIUnI%3d&risl=&pid=ImgRaw&r=0"
             alt="gym"
           />
           <ul>
-            <li>• Personalized workout plans</li>
-            <li>• Class scheduling</li>
-            <li>• Progress tracking</li>
+            <li>Personalized workout plans</li>
+            <li>Class scheduling</li>
+            <li>Progress tracking</li>
           </ul>
         </div>
 
@@ -128,13 +128,6 @@ export default function Login({ onLogin }) {
             <button type="submit" disabled={loading}>
               {loading ? "Signing in..." : "Sign in"}
             </button>
-
-            <div className={style.divider}>or continue with</div>
-
-            <div className={style.socialLogin}>
-              <button type="button">Continue with Google</button>
-              <button type="button">Continue with Apple</button>
-            </div>
 
             <p className={style.terms}>
               By signing in you agree to our <Link to="/terms">Terms</Link>.
