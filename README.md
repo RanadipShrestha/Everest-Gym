@@ -41,7 +41,7 @@ Everest Gym is a clean, professional, and responsive website designed to showcas
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/<your-username>/Everest-Gym.git
+git clone https://github.com/RanadipShrestha/Everest-Gym.git
 cd Everest-Gym
 npm run dev
 ```
